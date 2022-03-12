@@ -2,6 +2,7 @@ package one.digitalinnovation.dominio;
 
 import java.util.LinkedHashSet;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.Set;
 
 public class Dev{
@@ -40,13 +41,30 @@ public class Dev{
 
     public void inscrever(Bootcamp bootcamp){
 
+        this.contInscritos.addAll(bootcamp.getConteudos());
+        bootcamp.getDevsInscritos().add(this);
+
     }
 
     public void progredir(){
 
+        Optional<Conteudo> cont = this.contInscritos
+                .stream().findFirst();
+
+        if(cont.isPresent()){
+            this.contConcluidos.add(cont.get());
+            this.contInscritos.remove(cont.get());
+        } else{
+            System.err.println("Vocẽ não está matriculado em nenhum conteúdo ainda :(");
+        }
+
     }
 
-    public void calcularXP(){
+    public double calcularXP(){
+
+        return( this.contConcluidos.stream()
+                .mapToDouble(conteudo -> conteudo.calcularXP())
+                .sum() );
 
     }
 

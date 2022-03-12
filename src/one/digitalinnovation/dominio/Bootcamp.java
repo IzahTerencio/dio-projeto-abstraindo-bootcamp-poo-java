@@ -71,5 +71,5 @@ public class Bootcamp{
     public int hashCode(){
         return Objects.hash(nome, descricao, dataInicio, dataFim, devsInscritos, conteudos);
     }
-    
+
 }
