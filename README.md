@@ -4,12 +4,6 @@ Projeto realizado para o bootcamp Sportheca, da Digital Innovation One.
 
 
 ## **Links úteis**
-### **Vídeos das aulas**
-1. **Apresentação e visão geral de POO Programação Orientada a Objetos**: <[https://youtu.be/BQESkQ8avNw](url)>
-2. **Configuração de ambiente**: <[https://youtu.be/L-5IkwPSmYo](url)>
-3. **Abstração e encapsulamento**: <[https://youtu.be/yoak_Vsgsf4](url)>
-4. **Herança e polimorfismo, parte 1**: <[https://youtu.be/hFUE3Ovi480](url)>
-
 
 
 ### **Gitignore.io**
